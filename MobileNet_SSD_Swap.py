@@ -16,7 +16,7 @@ class MobileNetBackbone(nn.Module):
         # Choose layers to extract features from (example: 12 and last)
         self.out_indices = [12, len(mobilenet.features) - 1]
         # Adapt channels if needed
-        self.adapt1 = nn.Conv2d(40, 512, 1)
+        self.adapt1 = nn.Conv2d(112, 512, 1)  # <-- changed from 40 to 112
         self.adapt2 = nn.Conv2d(960, 512, 1)
 
     def forward(self, x):
@@ -48,8 +48,9 @@ class SSDMobileNetDetection(nn.Module):
     def forward(self, images, targets=None):
         images, targets = self.transform(images, targets)
         features = self.backbone(images.tensors)
-        anchors = self.anchor_generator(images, features)
-        detections = self.head(features, anchors)
+        features_list = list(features.values())
+        # Only pass features_list to the head
+        detections = self.head(features_list)
         return detections
 
 model = SSDMobileNetDetection(backbone, ssd_head, anchor_generator, transform)
