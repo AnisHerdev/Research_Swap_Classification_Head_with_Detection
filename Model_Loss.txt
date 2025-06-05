@@ -1,1 +1,39 @@
 This has the loss value while training the model
+Using device: cuda
+Model built successfully.
+Dataset size: 5717
+Epoch 1/10
+Processing batch 1430/1430Epoch [1/10], Loss: 12.7679
+Model saved to saved_models/ssd_epoch_1.pth
+Epoch 2/10
+Processing batch 1430/1430Epoch [2/10], Loss: 10.2958
+Model saved to saved_models/ssd_epoch_2.pth
+Epoch 3/10
+Processing batch 1430/1430Epoch [3/10], Loss: 9.8647
+Model saved to saved_models/ssd_epoch_3.pth
+Epoch 4/10
+Processing batch 1430/1430Epoch [4/10], Loss: 9.4628
+Model saved to saved_models/ssd_epoch_4.pth
+Epoch 5/10
+Processing batch 1430/1430Epoch [5/10], Loss: 9.1843
+Model saved to saved_models/ssd_epoch_5.pth
+Epoch 6/10
+Processing batch 1430/1430Epoch [6/10], Loss: 8.9102
+Model saved to saved_models/ssd_epoch_6.pth
+Epoch 7/10
+Processing batch 1430/1430Epoch [7/10], Loss: 8.6995
+Model saved to saved_models/ssd_epoch_7.pth
+Epoch 8/10
+Processing batch 1430/1430Epoch [8/10], Loss: 8.4209
+Model saved to saved_models/ssd_epoch_8.pth
+Epoch 9/10
+Processing batch 1430/1430Epoch [9/10], Loss: 8.1736
+Model saved to saved_models/ssd_epoch_9.pth
+Epoch 10/10
+Processing batch 1430/1430Epoch [10/10], Loss: 7.9412
+Model saved to saved_models/ssd_epoch_10.pth
+Loss curve saved to saved_models/loss_curve.png
+Model saved to Final_ssd_mobilenet_v3.pth
+
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True 

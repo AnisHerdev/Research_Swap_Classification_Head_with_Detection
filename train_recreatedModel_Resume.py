@@ -18,8 +18,7 @@ VOC_CLASSES = [
     "sheep", "sofa", "train", "tvmonitor"
 ]
 
-
-def build_custom_ssd320(num_classes=21):  # 20 classes + background
+def build_custom_ssd320(num_classes=21):
     weights = MobileNet_V3_Large_Weights.IMAGENET1K_V1
     backbone_model = mobilenet_v3_large(weights=weights)
     backbone = backbone_model.features
@@ -55,10 +54,8 @@ def build_custom_ssd320(num_classes=21):  # 20 classes + background
 
     return model
 
-
 def collate_fn(batch):
     return tuple(zip(*batch))
-
 
 def get_voc_dataset(root, year="2012", image_set="train"):
     def target_transform(annotation):
@@ -74,13 +71,13 @@ def get_voc_dataset(root, year="2012", image_set="train"):
                 float(bbox['ymax'])
             ]
             boxes.append(box)
-            labels.append(VOC_CLASSES.index(obj['name']) + 1)  # +1 for background class 0
+            labels.append(VOC_CLASSES.index(obj['name']) + 1)
         return {
             "boxes": torch.tensor(boxes, dtype=torch.float32),
             "labels": torch.tensor(labels, dtype=torch.int64)
         }
 
-    dataset = VOCDetection(
+    return VOCDetection(
         root=root,
         year=year,
         image_set=image_set,
@@ -89,21 +86,34 @@ def get_voc_dataset(root, year="2012", image_set="train"):
         target_transform=target_transform
     )
 
-    return dataset
+def resume_training(checkpoint_path, resume_from_epoch, more_epochs, checkpoint_basename="ssd_checkpoint"):
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
 
+    model = build_custom_ssd320(num_classes=21).to(device)
+    optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9, weight_decay=5e-4)
 
-def train(model, data_loader, optimizer, device, total_epochs, start_epoch=0, checkpoint_basename="ssd_checkpoint"):
-    model.train()
-    loss_history = []
+    # Load checkpoint
+    checkpoint = torch.load(os.path.join("checkpoints", checkpoint_path))
+    model.load_state_dict(checkpoint['model_state_dict'])
+    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    print(f"Loaded checkpoint from {checkpoint_path} (epoch {resume_from_epoch})")
 
-    # Load previous loss history if resuming
-    loss_path = f"checkpoints/{checkpoint_basename}_loss.pth"
-    if os.path.exists(loss_path):
-        loss_history = torch.load(loss_path)
+    # Load loss history if exists
+    loss_file = os.path.join("checkpoints", f"{checkpoint_basename}_loss_epoch{resume_from_epoch}.pt")
+    if os.path.exists(loss_file):
+        loss_history = torch.load(loss_file)
+    else:
+        print("Loss history file not found. Starting new loss history.")
+        loss_history = []
 
-    for epoch in range(start_epoch, start_epoch + total_epochs):
+    voc_dataset = get_voc_dataset(root="./VOCdata", year="2012", image_set="train")
+    data_loader = DataLoader(voc_dataset, batch_size=4, shuffle=True, num_workers=2, collate_fn=collate_fn)
+
+    for epoch in range(resume_from_epoch, resume_from_epoch + more_epochs):
+        model.train()
         running_loss = 0.0
-        print(f"\nEpoch {epoch + 1}/{start_epoch + total_epochs}")
+        print(f"\nEpoch {epoch + 1}/{resume_from_epoch + more_epochs}")
         for idx, (images, targets) in enumerate(data_loader):
             print(f"\rProcessing batch {idx + 1}/{len(data_loader)}", end='')
             images = [T.ToTensor()(img).to(device) for img in images]
@@ -122,62 +132,36 @@ def train(model, data_loader, optimizer, device, total_epochs, start_epoch=0, ch
         loss_history.append(avg_loss)
         print(f"\nEpoch [{epoch + 1}], Loss: {avg_loss:.4f}")
 
-        # Save checkpoint
-        os.makedirs("checkpoints", exist_ok=True)
+        # Save new checkpoint
         torch.save({
             'epoch': epoch + 1,
             'model_state_dict': model.state_dict(),
             'optimizer_state_dict': optimizer.state_dict()
-        }, f"checkpoints/{checkpoint_basename}.pth")
-        torch.save(loss_history, loss_path)
+        }, f"checkpoints/{checkpoint_basename}_epoch{epoch + 1}.pth")
+        torch.save(loss_history, f"checkpoints/{checkpoint_basename}_loss_epoch{epoch + 1}.pt")
         print(f"Checkpoint saved at epoch {epoch + 1}")
+        torch.cuda.empty_cache()
 
-    # Save loss curve
+    # Save new loss curve
     plt.figure()
     plt.plot(range(1, len(loss_history) + 1), loss_history, marker='o')
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
-    plt.title("Training Loss Curve")
+    plt.title("Resumed Training Loss Curve")
     plt.grid(True)
-    plt.savefig(f"checkpoints/{checkpoint_basename}_loss_curve.png")
+    plt.savefig(f"checkpoints/{checkpoint_basename}_loss_curve_resume.png")
     plt.close()
-    print(f"Loss curve saved to checkpoints/{checkpoint_basename}_loss_curve.png")
+    print(f"Loss curve saved to checkpoints/{checkpoint_basename}_loss_curve_resume.png")
 
 
 if __name__ == "__main__":
-    # === USER INPUT HERE ===
-    resume_checkpoint = "ssd_checkpoint.pth"   # Filename inside `checkpoints/`
-    resume_from_epoch = 10                     # Epoch of the .pth file you're resuming from
-    more_epochs_to_train = 5                   # How many *more* epochs to train
+    checkpoint_name = "ssd_checkpoint_epoch20.pth"
+    resume_from_epoch = 20
+    more_epochs = 10
 
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"Using device: {device}")
-
-    model = build_custom_ssd320(num_classes=21).to(device)
-    optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9, weight_decay=5e-4)
-
-    # Load checkpoint if exists
-    checkpoint_path = os.path.join("checkpoints", resume_checkpoint)
-    if os.path.exists(checkpoint_path):
-        checkpoint = torch.load(checkpoint_path, map_location=device)
-        model.load_state_dict(checkpoint['model_state_dict'])
-        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        print(f"Resumed from checkpoint: {resume_checkpoint} at epoch {resume_from_epoch}")
-    else:
-        print("No checkpoint found, training from scratch.")
-        resume_from_epoch = 0
-
-    # Load dataset
-    voc_dataset = get_voc_dataset(root="./VOCdata", year="2012", image_set="train")
-    data_loader = DataLoader(voc_dataset, batch_size=4, shuffle=True,
-                             num_workers=2, collate_fn=collate_fn)
-
-    train(model, data_loader, optimizer, device,
-          total_epochs=more_epochs_to_train,
-          start_epoch=resume_from_epoch,
-          checkpoint_basename=resume_checkpoint.replace(".pth", ""))
-
-    # Save final model
-    final_model_path = f"checkpoints/final_model_{resume_checkpoint.replace('.pth','')}.pth"
-    torch.save(model.state_dict(), final_model_path)
-    print(f"Final model saved to {final_model_path}")
+    resume_training(
+        checkpoint_path=checkpoint_name,
+        resume_from_epoch=resume_from_epoch,
+        more_epochs=more_epochs,
+        checkpoint_basename="ssd_checkpoint"
+    )
