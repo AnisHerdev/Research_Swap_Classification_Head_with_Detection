@@ -118,7 +118,7 @@ def collate_fn(batch):
 
 train_loader = DataLoader(
     train_dataset,
-    batch_size=4,
+    batch_size=32,
     shuffle=True,
     collate_fn=collate_fn
 )
