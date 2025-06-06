@@ -4,4 +4,3 @@ myenv/
 VOCdevkit/
 VOCdata/
 __pycache__/
-eval_tmp/
