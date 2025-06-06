@@ -154,7 +154,7 @@ if __name__ == "__main__":
     print(f"Dataset size: {len(voc_dataset)}")
 
     # Train from scratch
-    train(model, data_loader, optimizer, device, num_epochs=2, checkpoint_basename="ssd_checkpoint")
+    train(model, data_loader, optimizer, device, num_epochs=45, checkpoint_basename="ssd_checkpoint")
 
     # Save final model
     torch.save(model.state_dict(), "checkpoints/final_model_ssd320.pth")

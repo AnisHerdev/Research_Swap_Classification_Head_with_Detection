@@ -91,7 +91,7 @@ def resume_training(checkpoint_path, resume_from_epoch, more_epochs, checkpoint_
     print(f"Using device: {device}")
 
     model = build_custom_ssd320(num_classes=21).to(device)
-    optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9, weight_decay=5e-4)
+    optimizer = optim.SGD(model.parameters(), lr=0.0009, momentum=0.9, weight_decay=5e-4)
 
     # Load checkpoint
     checkpoint = torch.load(os.path.join("checkpoints", checkpoint_path))
@@ -155,9 +155,9 @@ def resume_training(checkpoint_path, resume_from_epoch, more_epochs, checkpoint_
 
 
 if __name__ == "__main__":
-    checkpoint_name = "ssd_checkpoint_epoch20.pth"
-    resume_from_epoch = 20
-    more_epochs = 10
+    checkpoint_name = "ssd_checkpoint_epoch100.pth"
+    resume_from_epoch = 100
+    more_epochs = 30
 
     resume_training(
         checkpoint_path=checkpoint_name,

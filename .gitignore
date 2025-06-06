@@ -1,4 +1,5 @@
 *.pth
+*.pt
 myenv/
 VOCdevkit/
 VOCdata/
