@@ -1,7 +1,7 @@
 import torch
 
 # Path to the loss file
-loss_path = "checkpoints/ssd_checkpoint_loss_epoch45.pt"
+loss_path = "checkpoints/ssd_checkpoint_loss_epoch130.pt"
 
 # Load the loss history
 loss_history = torch.load(loss_path)
