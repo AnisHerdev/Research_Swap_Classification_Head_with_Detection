@@ -80,7 +80,7 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch):
         epoch_loss += losses.item()
 
     avg_loss = epoch_loss / len(data_loader)
-    print(f"Epoch [{epoch}] Loss: {avg_loss:.4f}")
+    print(f"Epoch [{epoch+1}] Loss: {avg_loss:.4f}")
     return avg_loss
 
 def plot_losses(losses):
