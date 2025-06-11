@@ -146,6 +146,7 @@ def evaluate_model_map(model, data_loader, val_dataset, device):
 
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
     model = create_mobilenet_ssd(num_classes=21).to(device)
     checkpoint = torch.load("checkpoints/ssd_epoch_50.pth", map_location=device)
     model.load_state_dict(checkpoint['model_state_dict'])
