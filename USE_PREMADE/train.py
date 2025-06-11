@@ -12,6 +12,7 @@ from collections import OrderedDict
 from functools import partial
 import os
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 # --------------------- Custom Backbone ---------------------
 class MobileNetV3FeatureExtractor(nn.Module):
@@ -95,6 +96,18 @@ class DetectionTransform:
         }
         return image, target
 
+class VOCDataset(torch.utils.data.Dataset):
+    def __init__(self, root, year='2012', image_set='trainval', transform=None):
+        self.dataset = VOCDetection(root, year=year, image_set=image_set, download=True)
+        self.transform = transform
+    def __getitem__(self, idx):
+        img, target = self.dataset[idx]
+        if self.transform:
+            img, target = self.transform(img, target)
+        return img, target
+    def __len__(self):
+        return len(self.dataset)
+
 def collate_fn(batch):
     return tuple(zip(*batch))
 
@@ -128,11 +141,17 @@ def train():
     model = get_model(device)
     print("Device:", device)
     print("Model loaded successfully.".center(50, "="))
-    
+
     transform = DetectionTransform(size=320)
-    train_raw = VOCDetection("../VOCdata", year='2012', image_set='trainval', download=True)
-    train_dataset = [(transform(img, tgt)) for img, tgt in tqdm(train_raw)]
-    train_loader = DataLoader(train_dataset, batch_size=4, shuffle=True, num_workers=2, collate_fn=collate_fn)
+    train_dataset = VOCDataset("../VOCdata", year='2012', image_set='trainval', transform=transform)
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=8,  # Increase if you have enough GPU memory
+        shuffle=True,
+        num_workers=8,  # Increase as much as your CPU allows
+        pin_memory=True,
+        collate_fn=collate_fn
+    )
     print(f"Training dataset size: {len(train_dataset)}")
     print(f"Number of classes: {len(VOC_CLASSES) + 1}")
     print("Training DataLoader initialized.".center(50, "="))
@@ -140,8 +159,10 @@ def train():
     optimizer = torch.optim.SGD(params, lr=0.001, momentum=0.9, weight_decay=5e-4)
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=8, gamma=0.1)
 
-    num_epochs = 25
+    num_epochs = 40
     model.train()
+
+    all_losses = []
 
     for epoch in range(num_epochs):
         running_loss = 0.0
@@ -159,7 +180,32 @@ def train():
             running_loss += losses.item()
 
         lr_scheduler.step()
-        print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}")
+        avg_loss = running_loss/len(train_loader)
+        print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}")
+        all_losses.append(avg_loss)
+        # Save model checkpoint every epoch
+        checkpoint_dir = "checkpoints"
+        os.makedirs(checkpoint_dir, exist_ok=True)
+        checkpoint_path = os.path.join(checkpoint_dir, f"ssd_checkpoint_epoch{epoch+1}.pth")
+        torch.save({
+            'epoch': epoch+1,
+            'model_state_dict': model.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'lr_scheduler_state_dict': lr_scheduler.state_dict(),
+            'loss': avg_loss
+        }, checkpoint_path)
+        print(f"Checkpoint saved: {checkpoint_path}")
+        torch.cuda.empty_cache()
+
+    # Plot and save loss curve
+    plt.figure()
+    plt.plot(range(1, num_epochs+1), all_losses, marker='o')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.title('Training Loss Curve')
+    plt.grid(True)
+    plt.savefig('checkpoints/training_loss_curve.png')
+    print('Training loss curve saved as checkpoints/training_loss_curve.png')
 
 if __name__ == '__main__':
     train()
