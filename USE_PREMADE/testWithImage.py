@@ -6,7 +6,7 @@ import matplotlib.patches as patches
 from train import get_model, VOC_CLASSES
 
 # --------- User variables ---------
-image_path = "people.jpeg"  # Set your image path here
+image_path = "horse.jpeg"  # Set your image path here
 checkpoint_path = "checkpoints/ssd_checkpoint_epoch120.pth"  # Set your checkpoint path here
 score_threshold = 0.3  # Only show boxes with confidence above this
 
@@ -26,6 +26,7 @@ transform = T.Compose([
 
 # --------- Load and preprocess image ---------
 img = Image.open(image_path).convert("RGB")
+orig_w, orig_h = img.size
 img_tensor = transform(img).unsqueeze(0).to(device)
 
 # --------- Inference ---------
@@ -36,15 +37,25 @@ boxes = output['boxes'].cpu()
 labels = output['labels'].cpu()
 scores = output['scores'].cpu()
 
+# --------- Rescale boxes to original image size ---------
+scale_x = orig_w / 320
+scale_y = orig_h / 320
+boxes_rescaled = []
+for box in boxes:
+    xmin, ymin, xmax, ymax = box.tolist()
+    xmin = xmin * scale_x
+    xmax = xmax * scale_x
+    ymin = ymin * scale_y
+    ymax = ymax * scale_y
+    boxes_rescaled.append([xmin, ymin, xmax, ymax])
+
 # --------- Visualization ---------
 fig, ax = plt.subplots(1)
 ax.imshow(img)
-for box, label, score in zip(boxes, labels, scores):
+for box, label, score in zip(boxes_rescaled, labels, scores):
     if score < score_threshold:
-        # class_name = VOC_CLASSES[label-1] if 0 < label <= len(VOC_CLASSES) else str(label.item())
-        # print(f'Skipping box with score {score:.2f} below threshold {score_threshold}, class {class_name}')
         continue
-    xmin, ymin, xmax, ymax = box.tolist()
+    xmin, ymin, xmax, ymax = box
     rect = patches.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin, linewidth=2, edgecolor='r', facecolor='none')
     ax.add_patch(rect)
     class_name = VOC_CLASSES[label-1] if 0 < label <= len(VOC_CLASSES) else str(label.item())
