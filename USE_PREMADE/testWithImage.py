@@ -6,8 +6,8 @@ import matplotlib.patches as patches
 from train import get_model, VOC_CLASSES
 
 # --------- User variables ---------
-image_path = "dolphin.jpg"  # Set your image path here
-checkpoint_path = "checkpoints/ssd_checkpoint_epoch100.pth"  # Set your checkpoint path here
+image_path = "people.jpeg"  # Set your image path here
+checkpoint_path = "checkpoints/ssd_checkpoint_epoch120.pth"  # Set your checkpoint path here
 score_threshold = 0.3  # Only show boxes with confidence above this
 
 # --------- Load model ---------
@@ -41,8 +41,8 @@ fig, ax = plt.subplots(1)
 ax.imshow(img)
 for box, label, score in zip(boxes, labels, scores):
     if score < score_threshold:
-        class_name = VOC_CLASSES[label-1] if 0 < label <= len(VOC_CLASSES) else str(label.item())
-        print(f'Skipping box with score {score:.2f} below threshold {score_threshold}, class {class_name}')
+        # class_name = VOC_CLASSES[label-1] if 0 < label <= len(VOC_CLASSES) else str(label.item())
+        # print(f'Skipping box with score {score:.2f} below threshold {score_threshold}, class {class_name}')
         continue
     xmin, ymin, xmax, ymax = box.tolist()
     rect = patches.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin, linewidth=2, edgecolor='r', facecolor='none')

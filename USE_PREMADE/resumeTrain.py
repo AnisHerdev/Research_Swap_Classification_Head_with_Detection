@@ -29,9 +29,9 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
 
     # Load previous loss history if available
     loss_history = []
-    loss_curve_path = 'checkpoints_aug/training_loss_curve.png'
-    if os.path.exists('checkpoints_aug/loss_history.pt'):
-        loss_history = torch.load('checkpoints_aug/loss_history.pt')
+    loss_curve_path = 'checkpoints/training_loss_curve.png'
+    if os.path.exists('checkpoints/loss_history.pt'):
+        loss_history = torch.load('checkpoints/loss_history.pt')
     else:
         # If not available, fill with zeros up to start_epoch
         loss_history = [0.0] * start_epoch
@@ -48,8 +48,8 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
             # Apply augmentations before resizing and normalization
             image = self.aug(image)
             return super().__call__(image, target)
-
-    transform = AugmentedDetectionTransform(size=320)
+    # transform = AugmentedDetectionTransform(size=320)
+    transform = DetectionTransform(size=320)
     train_dataset = VOCDataset("../VOCdata", year='2012', image_set='trainval', transform=transform)
     train_loader = DataLoader(
         train_dataset,
@@ -78,7 +78,7 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
         print(f"Epoch [{epoch+1}], Loss: {avg_loss:.4f}, Learning Rate: {optimizer.param_groups[0]['lr']:.6f}")
         loss_history.append(avg_loss)
         # Save checkpoint
-        checkpoint_dir = "checkpoints_aug"
+        checkpoint_dir = "checkpoints"
         os.makedirs(checkpoint_dir, exist_ok=True)
         checkpoint_path = os.path.join(checkpoint_dir, f"ssd_checkpoint_epoch{epoch+1}.pth")
         torch.save({
@@ -89,7 +89,7 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
             'loss': avg_loss
         }, checkpoint_path)
         print(f"Checkpoint saved: {checkpoint_path}")
-        torch.save(loss_history, 'checkpoints_aug/loss_history.pt')
+        torch.save(loss_history, 'checkpoints/loss_history.pt')
         torch.cuda.empty_cache()
     # Plot and save loss curve
     plt.figure()
@@ -103,7 +103,7 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
 
 if __name__ == '__main__':
     # Set these variables directly instead of using argparse
-    checkpoint_path = "checkpoints_aug/ssd_checkpoint_epoch100.pth"  # <-- set your checkpoint path
+    checkpoint_path = "checkpoints/ssd_checkpoint_epoch100.pth"  # <-- set your checkpoint path
     start_epoch = 100  # <-- set the epoch value of the checkpoint file
-    num_additional_epochs = 30  # <-- set how many more epochs to train
+    num_additional_epochs = 20  # <-- set how many more epochs to train
     resume_train(checkpoint_path, start_epoch, num_additional_epochs)

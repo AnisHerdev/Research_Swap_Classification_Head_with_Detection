@@ -155,7 +155,8 @@ def train():
     print("Device:", device)
     print("Model loaded successfully.".center(50, "="))
 
-    transform = AugmentedDetectionTransform(size=320)
+    # transform = AugmentedDetectionTransform(size=320)
+    transform = DetectionTransform(size=320)
     train_dataset = VOCDataset("../VOCdata", year='2012', image_set='trainval', transform=transform)
     train_loader = DataLoader(
         train_dataset,
@@ -170,7 +171,7 @@ def train():
     print("Training DataLoader initialized.".center(50, "="))
     params = [p for p in model.parameters() if p.requires_grad]
     # Use AdamW optimizer
-    optimizer = optim.AdamW(params, lr=0.0005, weight_decay=1e-4)
+    optimizer = optim.AdamW(params, lr=0.0001, weight_decay=1e-4)
 
     # Use ReduceLROnPlateau scheduler
     lr_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
