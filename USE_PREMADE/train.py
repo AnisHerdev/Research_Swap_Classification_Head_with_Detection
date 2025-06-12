@@ -13,6 +13,7 @@ from functools import partial
 import os
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+import torch.optim as optim
 
 # --------------------- Custom Backbone ---------------------
 class MobileNetV3FeatureExtractor(nn.Module):
@@ -111,6 +112,18 @@ class VOCDataset(torch.utils.data.Dataset):
 def collate_fn(batch):
     return tuple(zip(*batch))
 
+# Data augmentation: add random horizontal flip and color jitter
+class AugmentedDetectionTransform(DetectionTransform):
+    def __init__(self, size=320):
+        super().__init__(size)
+        self.aug = T.Compose([
+            T.RandomHorizontalFlip(p=0.5),
+            T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1)
+        ])
+    def __call__(self, image, target):
+        image = self.aug(image)
+        return super().__call__(image, target)
+
 # --------------------- Load Model ---------------------
 def get_model(device):
     classification_backbone = mobilenet_v3_large(weights=MobileNet_V3_Large_Weights.IMAGENET1K_V1)
@@ -142,13 +155,13 @@ def train():
     print("Device:", device)
     print("Model loaded successfully.".center(50, "="))
 
-    transform = DetectionTransform(size=320)
+    transform = AugmentedDetectionTransform(size=320)
     train_dataset = VOCDataset("../VOCdata", year='2012', image_set='trainval', transform=transform)
     train_loader = DataLoader(
         train_dataset,
-        batch_size=8,  # Increase if you have enough GPU memory
+        batch_size=16,  # Increase if you have enough GPU memory
         shuffle=True,
-        num_workers=8,  # Increase as much as your CPU allows
+        num_workers=16,  # Increase as much as your CPU allows
         pin_memory=True,
         collate_fn=collate_fn
     )
@@ -156,10 +169,15 @@ def train():
     print(f"Number of classes: {len(VOC_CLASSES) + 1}")
     print("Training DataLoader initialized.".center(50, "="))
     params = [p for p in model.parameters() if p.requires_grad]
-    optimizer = torch.optim.SGD(params, lr=0.001, momentum=0.9, weight_decay=5e-4)
-    lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=8, gamma=0.1)
+    # Use AdamW optimizer
+    optimizer = optim.AdamW(params, lr=0.0005, weight_decay=1e-4)
 
-    num_epochs = 40
+    # Use ReduceLROnPlateau scheduler
+    lr_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode='min', factor=0.5, patience=4, min_lr=1e-6
+    )
+
+    num_epochs = 50
     model.train()
 
     all_losses = []
@@ -179,12 +197,12 @@ def train():
             optimizer.step()
             running_loss += losses.item()
 
-        lr_scheduler.step()
+        lr_scheduler.step(running_loss)
         avg_loss = running_loss/len(train_loader)
         print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}")
         all_losses.append(avg_loss)
         # Save model checkpoint every epoch
-        checkpoint_dir = "checkpoints"
+        checkpoint_dir = "checkpoints_aug"
         os.makedirs(checkpoint_dir, exist_ok=True)
         checkpoint_path = os.path.join(checkpoint_dir, f"ssd_checkpoint_epoch{epoch+1}.pth")
         torch.save({
@@ -197,15 +215,15 @@ def train():
         print(f"Checkpoint saved: {checkpoint_path}")
         torch.cuda.empty_cache()
 
-    # Plot and save loss curve
+    # Plot and save loss curve after training
     plt.figure()
-    plt.plot(range(1, num_epochs+1), all_losses, marker='o')
+    plt.plot(range(1, len(all_losses)+1), all_losses, marker='o')
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.title('Training Loss Curve')
     plt.grid(True)
-    plt.savefig('checkpoints/training_loss_curve.png')
-    print('Training loss curve saved as checkpoints/training_loss_curve.png')
+    plt.savefig('checkpoints_aug/training_loss_curve.png')
+    print('Training loss curve saved as checkpoints_aug/training_loss_curve.png')
 
 if __name__ == '__main__':
     train()
