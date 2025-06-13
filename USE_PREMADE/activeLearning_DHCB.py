@@ -199,7 +199,7 @@ def active_learning_loop(full_dataset, device, resume_cycle=0, resume_epoch=0):
                 print(f"Warning: Could not find checkpoint {ckpt_path}, starting from scratch for this cycle.")
 
         model.train()
-        for epoch in range(start_epoch, 5):
+        for epoch in range(start_epoch, 30):
             running_loss = 0
             for images, targets in tqdm(labeled_loader):
                 images = [img.to(device) for img in images]
@@ -210,7 +210,19 @@ def active_learning_loop(full_dataset, device, resume_cycle=0, resume_epoch=0):
                 loss.backward()
                 optimizer.step()
                 running_loss += loss.item()
-            print(f"Epoch {epoch+1}, Loss: {running_loss/len(labeled_loader):.4f}")
+            # print(f"Epoch {epoch+1}, Loss: {running_loss/len(labeled_loader):.4f}")
+            # checkpoint_dir = "saved_state"
+            # os.makedirs(checkpoint_dir, exist_ok=True)
+            # checkpoint_path = os.path.join(checkpoint_dir, f"active_model_cycle{cycle+1}_epoch{epoch+1}.pth")
+            # torch.save({
+            #     'cycle': cycle+1,
+            #     'epoch': epoch+1,
+            #     'model_state_dict': model.state_dict(),
+            #     'optimizer_state_dict': optimizer.state_dict(),
+            #     'loss': running_loss/len(labeled_loader)
+            # }, checkpoint_path)
+            # print(f"Checkpoint saved: {checkpoint_path}")
+            torch.cuda.empty_cache()
         # Save model checkpoint after each cycle (not epoch)
         checkpoint_dir = "saved_state"
         os.makedirs(checkpoint_dir, exist_ok=True)
@@ -222,7 +234,7 @@ def active_learning_loop(full_dataset, device, resume_cycle=0, resume_epoch=0):
             'loss': running_loss/len(labeled_loader)
         }, checkpoint_path)
         print(f"Checkpoint saved: {checkpoint_path}")
-
+        torch.cuda.empty_cache()
         # Select next batch
         unlabeled_loader = DataLoader(unlabeled_set, batch_size=1, shuffle=False, num_workers=4, collate_fn=collate_fn)
         uncertainties = compute_uncertainty(model, unlabeled_loader, device)
@@ -232,6 +244,8 @@ def active_learning_loop(full_dataset, device, resume_cycle=0, resume_epoch=0):
         unlabeled_indices = [idx for idx in unlabeled_indices if idx not in selected]
         torch.save(labeled_indices, f"saved_state/active_labeled_cycle{cycle+1}.pt")
         torch.save(unlabeled_indices, f"saved_state/active_unlabeled_cycle{cycle+1}.pt")
+        torch.cuda.empty_cache()
+        
 
     print("\nActive Learning completed!")
 
