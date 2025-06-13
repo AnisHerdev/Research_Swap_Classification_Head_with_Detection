@@ -203,7 +203,7 @@ def train():
         print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}")
         all_losses.append(avg_loss)
         # Save model checkpoint every epoch
-        checkpoint_dir = "checkpoints_aug"
+        checkpoint_dir = "checkpoints"
         os.makedirs(checkpoint_dir, exist_ok=True)
         checkpoint_path = os.path.join(checkpoint_dir, f"ssd_checkpoint_epoch{epoch+1}.pth")
         torch.save({
@@ -223,8 +223,8 @@ def train():
     plt.ylabel('Loss')
     plt.title('Training Loss Curve')
     plt.grid(True)
-    plt.savefig('checkpoints_aug/training_loss_curve.png')
-    print('Training loss curve saved as checkpoints_aug/training_loss_curve.png')
+    plt.savefig('checkpoints/training_loss_curve.png')
+    print('Training loss curve saved as checkpoints/training_loss_curve.png')
 
 if __name__ == '__main__':
     train()

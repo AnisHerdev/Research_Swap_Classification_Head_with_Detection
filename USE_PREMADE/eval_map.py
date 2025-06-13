@@ -57,7 +57,7 @@ if __name__ == "__main__":
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     # Load model and checkpoint
     model = get_model(device)
-    checkpoint = torch.load("checkpoints/ssd_checkpoint_epoch120.pth", map_location=device)
+    checkpoint = torch.load("checkpoints/ssd_checkpoint_epoch198.pth", map_location=device)
     model.load_state_dict(checkpoint['model_state_dict'])
     print("Model loaded successfully.".center(50, "="))
     # Load VOC validation set

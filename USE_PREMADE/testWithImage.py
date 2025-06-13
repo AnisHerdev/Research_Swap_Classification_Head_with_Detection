@@ -7,7 +7,7 @@ from train import get_model, VOC_CLASSES
 
 # --------- User variables ---------
 image_path = "horse.jpeg"  # Set your image path here
-checkpoint_path = "checkpoints/ssd_checkpoint_epoch120.pth"  # Set your checkpoint path here
+checkpoint_path = "checkpoints/ssd_checkpoint_epoch198.pth"  # Set your checkpoint path here
 score_threshold = 0.3  # Only show boxes with confidence above this
 
 # --------- Load model ---------

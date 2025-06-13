@@ -25,7 +25,7 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
 
     # Manually set the learning rate after loading state_dict
     for param_group in optimizer.param_groups:
-        param_group['lr'] = 0.0001
+        param_group['lr'] = 0.00001
 
     # Load previous loss history if available
     loss_history = []
@@ -103,7 +103,7 @@ def resume_train(checkpoint_path, start_epoch, num_additional_epochs):
 
 if __name__ == '__main__':
     # Set these variables directly instead of using argparse
-    checkpoint_path = "checkpoints/ssd_checkpoint_epoch100.pth"  # <-- set your checkpoint path
-    start_epoch = 100  # <-- set the epoch value of the checkpoint file
+    checkpoint_path = "checkpoints/ssd_checkpoint_epoch210.pth"  # <-- set your checkpoint path
+    start_epoch = 210  # <-- set the epoch value of the checkpoint file
     num_additional_epochs = 20  # <-- set how many more epochs to train
     resume_train(checkpoint_path, start_epoch, num_additional_epochs)
