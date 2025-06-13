@@ -1,0 +1,941 @@
+=== Active Learning Iteration 1/10 ===
+100%|██████████| 32/32 [00:03<00:00,  8.62it/s]
+Epoch 1, Loss: 18.2045
+Checkpoint saved: saved_state/active_model_cycle1_epoch1.pth
+100%|██████████| 32/32 [00:02<00:00, 12.61it/s]
+Epoch 2, Loss: 15.6282
+Checkpoint saved: saved_state/active_model_cycle1_epoch2.pth
+100%|██████████| 32/32 [00:02<00:00, 12.96it/s]
+Epoch 3, Loss: 13.6919
+Checkpoint saved: saved_state/active_model_cycle1_epoch3.pth
+100%|██████████| 32/32 [00:02<00:00, 12.33it/s]
+Epoch 4, Loss: 11.8735
+Checkpoint saved: saved_state/active_model_cycle1_epoch4.pth
+100%|██████████| 32/32 [00:02<00:00, 12.88it/s]
+Epoch 5, Loss: 10.3686
+Checkpoint saved: saved_state/active_model_cycle1_epoch5.pth
+100%|██████████| 32/32 [00:02<00:00, 13.25it/s]
+Epoch 6, Loss: 9.5487
+Checkpoint saved: saved_state/active_model_cycle1_epoch6.pth
+100%|██████████| 32/32 [00:02<00:00, 12.67it/s]
+Epoch 7, Loss: 8.8682
+Checkpoint saved: saved_state/active_model_cycle1_epoch7.pth
+100%|██████████| 32/32 [00:02<00:00, 12.31it/s]
+Epoch 8, Loss: 8.4468
+Checkpoint saved: saved_state/active_model_cycle1_epoch8.pth
+100%|██████████| 32/32 [00:02<00:00, 12.75it/s]
+Epoch 9, Loss: 8.1878
+Checkpoint saved: saved_state/active_model_cycle1_epoch9.pth
+100%|██████████| 32/32 [00:02<00:00, 12.62it/s]
+Epoch 10, Loss: 7.8761
+Checkpoint saved: saved_state/active_model_cycle1_epoch10.pth
+100%|██████████| 32/32 [00:02<00:00, 12.77it/s]
+Epoch 11, Loss: 7.6091
+Checkpoint saved: saved_state/active_model_cycle1_epoch11.pth
+100%|██████████| 32/32 [00:02<00:00, 13.20it/s]
+Epoch 12, Loss: 7.4784
+Checkpoint saved: saved_state/active_model_cycle1_epoch12.pth
+100%|██████████| 32/32 [00:02<00:00, 12.89it/s]
+Epoch 13, Loss: 7.1669
+Checkpoint saved: saved_state/active_model_cycle1_epoch13.pth
+100%|██████████| 32/32 [00:02<00:00, 12.85it/s]
+Epoch 14, Loss: 7.2374
+Checkpoint saved: saved_state/active_model_cycle1_epoch14.pth
+100%|██████████| 32/32 [00:02<00:00, 12.77it/s]
+Epoch 15, Loss: 6.9337
+Checkpoint saved: saved_state/active_model_cycle1_epoch15.pth
+100%|██████████| 32/32 [00:02<00:00, 13.19it/s]
+Epoch 16, Loss: 6.7152
+Checkpoint saved: saved_state/active_model_cycle1_epoch16.pth
+100%|██████████| 32/32 [00:02<00:00, 12.67it/s]
+Epoch 17, Loss: 6.5390
+Checkpoint saved: saved_state/active_model_cycle1_epoch17.pth
+100%|██████████| 32/32 [00:02<00:00, 12.54it/s]
+Epoch 18, Loss: 6.4118
+Checkpoint saved: saved_state/active_model_cycle1_epoch18.pth
+100%|██████████| 32/32 [00:02<00:00, 12.74it/s]
+Epoch 19, Loss: 6.2563
+Checkpoint saved: saved_state/active_model_cycle1_epoch19.pth
+100%|██████████| 32/32 [00:02<00:00, 12.63it/s]
+Epoch 20, Loss: 6.0913
+Checkpoint saved: saved_state/active_model_cycle1_epoch20.pth
+100%|██████████| 32/32 [00:02<00:00, 12.57it/s]
+Epoch 21, Loss: 5.9350
+Checkpoint saved: saved_state/active_model_cycle1_epoch21.pth
+100%|██████████| 32/32 [00:02<00:00, 12.88it/s]
+Epoch 22, Loss: 5.7800
+Checkpoint saved: saved_state/active_model_cycle1_epoch22.pth
+100%|██████████| 32/32 [00:02<00:00, 12.34it/s]
+Epoch 23, Loss: 5.6779
+Checkpoint saved: saved_state/active_model_cycle1_epoch23.pth
+100%|██████████| 32/32 [00:02<00:00, 10.72it/s]
+Epoch 24, Loss: 5.6184
+Checkpoint saved: saved_state/active_model_cycle1_epoch24.pth
+100%|██████████| 32/32 [00:02<00:00, 13.13it/s]
+Epoch 25, Loss: 5.4087
+Checkpoint saved: saved_state/active_model_cycle1_epoch25.pth
+100%|██████████| 32/32 [00:02<00:00, 12.91it/s]
+Epoch 26, Loss: 5.3646
+Checkpoint saved: saved_state/active_model_cycle1_epoch26.pth
+100%|██████████| 32/32 [00:02<00:00, 11.44it/s]
+Epoch 27, Loss: 5.2577
+Checkpoint saved: saved_state/active_model_cycle1_epoch27.pth
+100%|██████████| 32/32 [00:02<00:00, 12.09it/s]
+Epoch 28, Loss: 5.1330
+Checkpoint saved: saved_state/active_model_cycle1_epoch28.pth
+100%|██████████| 32/32 [00:02<00:00, 12.71it/s]
+Epoch 29, Loss: 5.0386
+Checkpoint saved: saved_state/active_model_cycle1_epoch29.pth
+100%|██████████| 32/32 [00:02<00:00, 12.65it/s]
+Epoch 30, Loss: 4.8725
+Checkpoint saved: saved_state/active_model_cycle1_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle1_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 11040/11040 [02:38<00:00, 69.58it/s]
+
+=== Active Learning Iteration 2/10 ===
+100%|██████████| 47/47 [00:03<00:00, 13.02it/s]
+Epoch 1, Loss: 17.7113
+Checkpoint saved: saved_state/active_model_cycle2_epoch1.pth
+100%|██████████| 47/47 [00:03<00:00, 13.65it/s]
+Epoch 2, Loss: 14.5270
+Checkpoint saved: saved_state/active_model_cycle2_epoch2.pth
+100%|██████████| 47/47 [00:03<00:00, 13.04it/s]
+Epoch 3, Loss: 12.1325
+Checkpoint saved: saved_state/active_model_cycle2_epoch3.pth
+100%|██████████| 47/47 [00:03<00:00, 14.23it/s]
+Epoch 4, Loss: 10.3701
+Checkpoint saved: saved_state/active_model_cycle2_epoch4.pth
+100%|██████████| 47/47 [00:03<00:00, 13.20it/s]
+Epoch 5, Loss: 9.3712
+Checkpoint saved: saved_state/active_model_cycle2_epoch5.pth
+100%|██████████| 47/47 [00:03<00:00, 13.79it/s]
+Epoch 6, Loss: 8.6980
+Checkpoint saved: saved_state/active_model_cycle2_epoch6.pth
+100%|██████████| 47/47 [00:03<00:00, 12.34it/s]
+Epoch 7, Loss: 8.3192
+Checkpoint saved: saved_state/active_model_cycle2_epoch7.pth
+100%|██████████| 47/47 [00:04<00:00, 11.45it/s]
+Epoch 8, Loss: 7.9379
+Checkpoint saved: saved_state/active_model_cycle2_epoch8.pth
+100%|██████████| 47/47 [00:03<00:00, 13.43it/s]
+Epoch 9, Loss: 7.6880
+Checkpoint saved: saved_state/active_model_cycle2_epoch9.pth
+100%|██████████| 47/47 [00:03<00:00, 13.28it/s]
+Epoch 10, Loss: 7.5014
+Checkpoint saved: saved_state/active_model_cycle2_epoch10.pth
+100%|██████████| 47/47 [00:03<00:00, 12.22it/s]
+Epoch 11, Loss: 7.2602
+Checkpoint saved: saved_state/active_model_cycle2_epoch11.pth
+100%|██████████| 47/47 [00:03<00:00, 13.47it/s]
+Epoch 12, Loss: 6.9708
+Checkpoint saved: saved_state/active_model_cycle2_epoch12.pth
+100%|██████████| 47/47 [00:03<00:00, 13.92it/s]
+Epoch 13, Loss: 6.7180
+Checkpoint saved: saved_state/active_model_cycle2_epoch13.pth
+100%|██████████| 47/47 [00:03<00:00, 14.08it/s]
+Epoch 14, Loss: 6.5633
+Checkpoint saved: saved_state/active_model_cycle2_epoch14.pth
+100%|██████████| 47/47 [00:03<00:00, 13.87it/s]
+Epoch 15, Loss: 6.3891
+Checkpoint saved: saved_state/active_model_cycle2_epoch15.pth
+100%|██████████| 47/47 [00:03<00:00, 13.94it/s]
+Epoch 16, Loss: 6.2691
+Checkpoint saved: saved_state/active_model_cycle2_epoch16.pth
+100%|██████████| 47/47 [00:03<00:00, 13.76it/s]
+Epoch 17, Loss: 6.1512
+Checkpoint saved: saved_state/active_model_cycle2_epoch17.pth
+100%|██████████| 47/47 [00:03<00:00, 13.09it/s]
+Epoch 18, Loss: 5.9202
+Checkpoint saved: saved_state/active_model_cycle2_epoch18.pth
+100%|██████████| 47/47 [00:03<00:00, 13.48it/s]
+Epoch 19, Loss: 5.7824
+Checkpoint saved: saved_state/active_model_cycle2_epoch19.pth
+100%|██████████| 47/47 [00:03<00:00, 14.28it/s]
+Epoch 20, Loss: 5.6514
+Checkpoint saved: saved_state/active_model_cycle2_epoch20.pth
+100%|██████████| 47/47 [00:03<00:00, 14.28it/s]
+Epoch 21, Loss: 5.5155
+Checkpoint saved: saved_state/active_model_cycle2_epoch21.pth
+100%|██████████| 47/47 [00:03<00:00, 13.60it/s]
+Epoch 22, Loss: 5.4004
+Checkpoint saved: saved_state/active_model_cycle2_epoch22.pth
+100%|██████████| 47/47 [00:03<00:00, 14.54it/s]
+Epoch 23, Loss: 5.2050
+Checkpoint saved: saved_state/active_model_cycle2_epoch23.pth
+100%|██████████| 47/47 [00:03<00:00, 13.83it/s]
+Epoch 24, Loss: 5.0828
+Checkpoint saved: saved_state/active_model_cycle2_epoch24.pth
+100%|██████████| 47/47 [00:03<00:00, 13.21it/s]
+Epoch 25, Loss: 4.9800
+Checkpoint saved: saved_state/active_model_cycle2_epoch25.pth
+100%|██████████| 47/47 [00:03<00:00, 13.91it/s]
+Epoch 26, Loss: 4.8188
+Checkpoint saved: saved_state/active_model_cycle2_epoch26.pth
+100%|██████████| 47/47 [00:03<00:00, 12.59it/s]
+Epoch 27, Loss: 4.6969
+Checkpoint saved: saved_state/active_model_cycle2_epoch27.pth
+100%|██████████| 47/47 [00:03<00:00, 14.30it/s]
+Epoch 28, Loss: 4.6257
+Checkpoint saved: saved_state/active_model_cycle2_epoch28.pth
+100%|██████████| 47/47 [00:03<00:00, 13.65it/s]
+Epoch 29, Loss: 4.4938
+Checkpoint saved: saved_state/active_model_cycle2_epoch29.pth
+100%|██████████| 47/47 [00:03<00:00, 14.05it/s]
+Epoch 30, Loss: 4.3457
+Checkpoint saved: saved_state/active_model_cycle2_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle2_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 10790/10790 [02:34<00:00, 69.98it/s]
+
+=== Active Learning Iteration 3/10 ===
+100%|██████████| 63/63 [00:04<00:00, 14.93it/s]
+Epoch 1, Loss: 17.3229
+Checkpoint saved: saved_state/active_model_cycle3_epoch1.pth
+100%|██████████| 63/63 [00:04<00:00, 15.01it/s]
+Epoch 2, Loss: 13.5561
+Checkpoint saved: saved_state/active_model_cycle3_epoch2.pth
+100%|██████████| 63/63 [00:04<00:00, 15.40it/s]
+Epoch 3, Loss: 10.9575
+Checkpoint saved: saved_state/active_model_cycle3_epoch3.pth
+100%|██████████| 63/63 [00:04<00:00, 15.17it/s]
+Epoch 4, Loss: 9.7133
+Checkpoint saved: saved_state/active_model_cycle3_epoch4.pth
+100%|██████████| 63/63 [00:04<00:00, 15.39it/s]
+Epoch 5, Loss: 9.0277
+Checkpoint saved: saved_state/active_model_cycle3_epoch5.pth
+100%|██████████| 63/63 [00:04<00:00, 15.67it/s]
+Epoch 6, Loss: 8.5791
+Checkpoint saved: saved_state/active_model_cycle3_epoch6.pth
+100%|██████████| 63/63 [00:04<00:00, 15.56it/s]
+Epoch 7, Loss: 8.2450
+Checkpoint saved: saved_state/active_model_cycle3_epoch7.pth
+100%|██████████| 63/63 [00:04<00:00, 14.31it/s]
+Epoch 8, Loss: 7.9079
+Checkpoint saved: saved_state/active_model_cycle3_epoch8.pth
+100%|██████████| 63/63 [00:04<00:00, 15.40it/s]
+Epoch 9, Loss: 7.6556
+Checkpoint saved: saved_state/active_model_cycle3_epoch9.pth
+100%|██████████| 63/63 [00:04<00:00, 15.33it/s]
+Epoch 10, Loss: 7.4321
+Checkpoint saved: saved_state/active_model_cycle3_epoch10.pth
+100%|██████████| 63/63 [00:04<00:00, 15.32it/s]
+Epoch 11, Loss: 7.2431
+Checkpoint saved: saved_state/active_model_cycle3_epoch11.pth
+100%|██████████| 63/63 [00:04<00:00, 15.34it/s]
+Epoch 12, Loss: 6.9690
+Checkpoint saved: saved_state/active_model_cycle3_epoch12.pth
+100%|██████████| 63/63 [00:04<00:00, 15.39it/s]
+Epoch 13, Loss: 6.8129
+Checkpoint saved: saved_state/active_model_cycle3_epoch13.pth
+100%|██████████| 63/63 [00:04<00:00, 14.41it/s]
+Epoch 14, Loss: 6.6340
+Checkpoint saved: saved_state/active_model_cycle3_epoch14.pth
+100%|██████████| 63/63 [00:04<00:00, 14.90it/s]
+Epoch 15, Loss: 6.4485
+Checkpoint saved: saved_state/active_model_cycle3_epoch15.pth
+100%|██████████| 63/63 [00:04<00:00, 14.41it/s]
+Epoch 16, Loss: 6.2711
+Checkpoint saved: saved_state/active_model_cycle3_epoch16.pth
+100%|██████████| 63/63 [00:04<00:00, 14.56it/s]
+Epoch 17, Loss: 6.0642
+Checkpoint saved: saved_state/active_model_cycle3_epoch17.pth
+100%|██████████| 63/63 [00:04<00:00, 15.46it/s]
+Epoch 18, Loss: 5.9651
+Checkpoint saved: saved_state/active_model_cycle3_epoch18.pth
+100%|██████████| 63/63 [00:04<00:00, 15.19it/s]
+Epoch 19, Loss: 5.7453
+Checkpoint saved: saved_state/active_model_cycle3_epoch19.pth
+100%|██████████| 63/63 [00:04<00:00, 15.34it/s]
+Epoch 20, Loss: 5.5864
+Checkpoint saved: saved_state/active_model_cycle3_epoch20.pth
+100%|██████████| 63/63 [00:04<00:00, 15.31it/s]
+Epoch 21, Loss: 5.4436
+Checkpoint saved: saved_state/active_model_cycle3_epoch21.pth
+100%|██████████| 63/63 [00:04<00:00, 14.98it/s]
+Epoch 22, Loss: 5.2868
+Checkpoint saved: saved_state/active_model_cycle3_epoch22.pth
+100%|██████████| 63/63 [00:04<00:00, 15.05it/s]
+Epoch 23, Loss: 5.1429
+Checkpoint saved: saved_state/active_model_cycle3_epoch23.pth
+100%|██████████| 63/63 [00:04<00:00, 14.52it/s]
+Epoch 24, Loss: 4.9979
+Checkpoint saved: saved_state/active_model_cycle3_epoch24.pth
+100%|██████████| 63/63 [00:04<00:00, 15.28it/s]
+Epoch 25, Loss: 4.8711
+Checkpoint saved: saved_state/active_model_cycle3_epoch25.pth
+100%|██████████| 63/63 [00:04<00:00, 15.08it/s]
+Epoch 26, Loss: 4.7405
+Checkpoint saved: saved_state/active_model_cycle3_epoch26.pth
+100%|██████████| 63/63 [00:04<00:00, 15.02it/s]
+Epoch 27, Loss: 4.6319
+Checkpoint saved: saved_state/active_model_cycle3_epoch27.pth
+100%|██████████| 63/63 [00:04<00:00, 15.41it/s]
+Epoch 28, Loss: 4.5209
+Checkpoint saved: saved_state/active_model_cycle3_epoch28.pth
+100%|██████████| 63/63 [00:04<00:00, 15.32it/s]
+Epoch 29, Loss: 4.3845
+Checkpoint saved: saved_state/active_model_cycle3_epoch29.pth
+100%|██████████| 63/63 [00:04<00:00, 15.32it/s]
+Epoch 30, Loss: 4.2818
+Checkpoint saved: saved_state/active_model_cycle3_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle3_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 10540/10540 [02:32<00:00, 69.28it/s]
+
+=== Active Learning Iteration 4/10 ===
+100%|██████████| 79/79 [00:05<00:00, 15.51it/s]
+Epoch 1, Loss: 16.6411
+Checkpoint saved: saved_state/active_model_cycle4_epoch1.pth
+100%|██████████| 79/79 [00:05<00:00, 15.71it/s]
+Epoch 2, Loss: 12.5706
+Checkpoint saved: saved_state/active_model_cycle4_epoch2.pth
+100%|██████████| 79/79 [00:05<00:00, 15.74it/s]
+Epoch 3, Loss: 10.4029
+Checkpoint saved: saved_state/active_model_cycle4_epoch3.pth
+100%|██████████| 79/79 [00:05<00:00, 15.24it/s]
+Epoch 4, Loss: 9.3269
+Checkpoint saved: saved_state/active_model_cycle4_epoch4.pth
+100%|██████████| 79/79 [00:04<00:00, 16.16it/s]
+Epoch 5, Loss: 8.8558
+Checkpoint saved: saved_state/active_model_cycle4_epoch5.pth
+100%|██████████| 79/79 [00:04<00:00, 15.88it/s]
+Epoch 6, Loss: 8.4030
+Checkpoint saved: saved_state/active_model_cycle4_epoch6.pth
+100%|██████████| 79/79 [00:04<00:00, 16.13it/s]
+Epoch 7, Loss: 8.1332
+Checkpoint saved: saved_state/active_model_cycle4_epoch7.pth
+100%|██████████| 79/79 [00:04<00:00, 16.29it/s]
+Epoch 8, Loss: 7.8440
+Checkpoint saved: saved_state/active_model_cycle4_epoch8.pth
+100%|██████████| 79/79 [00:04<00:00, 16.08it/s]
+Epoch 9, Loss: 7.5410
+Checkpoint saved: saved_state/active_model_cycle4_epoch9.pth
+100%|██████████| 79/79 [00:04<00:00, 15.83it/s]
+Epoch 10, Loss: 7.4333
+Checkpoint saved: saved_state/active_model_cycle4_epoch10.pth
+100%|██████████| 79/79 [00:04<00:00, 15.91it/s]
+Epoch 11, Loss: 7.2132
+Checkpoint saved: saved_state/active_model_cycle4_epoch11.pth
+100%|██████████| 79/79 [00:04<00:00, 16.19it/s]
+Epoch 12, Loss: 6.9759
+Checkpoint saved: saved_state/active_model_cycle4_epoch12.pth
+100%|██████████| 79/79 [00:05<00:00, 15.80it/s]
+Epoch 13, Loss: 6.7984
+Checkpoint saved: saved_state/active_model_cycle4_epoch13.pth
+100%|██████████| 79/79 [00:04<00:00, 16.13it/s]
+Epoch 14, Loss: 6.6178
+Checkpoint saved: saved_state/active_model_cycle4_epoch14.pth
+100%|██████████| 79/79 [00:04<00:00, 15.94it/s]
+Epoch 15, Loss: 6.4702
+Checkpoint saved: saved_state/active_model_cycle4_epoch15.pth
+100%|██████████| 79/79 [00:04<00:00, 16.03it/s]
+Epoch 16, Loss: 6.2421
+Checkpoint saved: saved_state/active_model_cycle4_epoch16.pth
+100%|██████████| 79/79 [00:04<00:00, 15.98it/s]
+Epoch 17, Loss: 6.0521
+Checkpoint saved: saved_state/active_model_cycle4_epoch17.pth
+100%|██████████| 79/79 [00:04<00:00, 16.08it/s]
+Epoch 18, Loss: 5.8821
+Checkpoint saved: saved_state/active_model_cycle4_epoch18.pth
+100%|██████████| 79/79 [00:04<00:00, 16.08it/s]
+Epoch 19, Loss: 5.7996
+Checkpoint saved: saved_state/active_model_cycle4_epoch19.pth
+100%|██████████| 79/79 [00:05<00:00, 15.14it/s]
+Epoch 20, Loss: 5.5979
+Checkpoint saved: saved_state/active_model_cycle4_epoch20.pth
+100%|██████████| 79/79 [00:04<00:00, 15.94it/s]
+Epoch 21, Loss: 5.3970
+Checkpoint saved: saved_state/active_model_cycle4_epoch21.pth
+100%|██████████| 79/79 [00:05<00:00, 15.76it/s]
+Epoch 22, Loss: 5.2699
+Checkpoint saved: saved_state/active_model_cycle4_epoch22.pth
+100%|██████████| 79/79 [00:05<00:00, 15.75it/s]
+Epoch 23, Loss: 5.2067
+Checkpoint saved: saved_state/active_model_cycle4_epoch23.pth
+100%|██████████| 79/79 [00:05<00:00, 14.90it/s]
+Epoch 24, Loss: 4.9855
+Checkpoint saved: saved_state/active_model_cycle4_epoch24.pth
+100%|██████████| 79/79 [00:05<00:00, 15.75it/s]
+Epoch 25, Loss: 4.8663
+Checkpoint saved: saved_state/active_model_cycle4_epoch25.pth
+100%|██████████| 79/79 [00:04<00:00, 16.21it/s]
+Epoch 26, Loss: 4.7958
+Checkpoint saved: saved_state/active_model_cycle4_epoch26.pth
+100%|██████████| 79/79 [00:05<00:00, 15.69it/s]
+Epoch 27, Loss: 4.6088
+Checkpoint saved: saved_state/active_model_cycle4_epoch27.pth
+100%|██████████| 79/79 [00:05<00:00, 15.79it/s]
+Epoch 28, Loss: 4.5619
+Checkpoint saved: saved_state/active_model_cycle4_epoch28.pth
+100%|██████████| 79/79 [00:05<00:00, 15.70it/s]
+Epoch 29, Loss: 4.3696
+Checkpoint saved: saved_state/active_model_cycle4_epoch29.pth
+100%|██████████| 79/79 [00:05<00:00, 15.26it/s]
+Epoch 30, Loss: 4.2633
+Checkpoint saved: saved_state/active_model_cycle4_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle4_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 10290/10290 [02:28<00:00, 69.32it/s]
+
+=== Active Learning Iteration 5/10 ===
+100%|██████████| 94/94 [00:05<00:00, 16.12it/s]
+Epoch 1, Loss: 16.2277
+Checkpoint saved: saved_state/active_model_cycle5_epoch1.pth
+100%|██████████| 94/94 [00:05<00:00, 16.16it/s]
+Epoch 2, Loss: 11.9861
+Checkpoint saved: saved_state/active_model_cycle5_epoch2.pth
+100%|██████████| 94/94 [00:05<00:00, 15.84it/s]
+Epoch 3, Loss: 9.9934
+Checkpoint saved: saved_state/active_model_cycle5_epoch3.pth
+100%|██████████| 94/94 [00:05<00:00, 16.31it/s]
+Epoch 4, Loss: 9.1983
+Checkpoint saved: saved_state/active_model_cycle5_epoch4.pth
+100%|██████████| 94/94 [00:05<00:00, 16.60it/s]
+Epoch 5, Loss: 8.6640
+Checkpoint saved: saved_state/active_model_cycle5_epoch5.pth
+100%|██████████| 94/94 [00:05<00:00, 16.60it/s]
+Epoch 6, Loss: 8.3648
+Checkpoint saved: saved_state/active_model_cycle5_epoch6.pth
+100%|██████████| 94/94 [00:05<00:00, 16.53it/s]
+Epoch 7, Loss: 8.0409
+Checkpoint saved: saved_state/active_model_cycle5_epoch7.pth
+100%|██████████| 94/94 [00:05<00:00, 16.12it/s]
+Epoch 8, Loss: 7.8070
+Checkpoint saved: saved_state/active_model_cycle5_epoch8.pth
+100%|██████████| 94/94 [00:05<00:00, 16.24it/s]
+Epoch 9, Loss: 7.5040
+Checkpoint saved: saved_state/active_model_cycle5_epoch9.pth
+100%|██████████| 94/94 [00:05<00:00, 15.81it/s]
+Epoch 10, Loss: 7.2887
+Checkpoint saved: saved_state/active_model_cycle5_epoch10.pth
+100%|██████████| 94/94 [00:05<00:00, 16.51it/s]
+Epoch 11, Loss: 7.0370
+Checkpoint saved: saved_state/active_model_cycle5_epoch11.pth
+100%|██████████| 94/94 [00:05<00:00, 16.68it/s]
+Epoch 12, Loss: 6.7470
+Checkpoint saved: saved_state/active_model_cycle5_epoch12.pth
+100%|██████████| 94/94 [00:05<00:00, 16.04it/s]
+Epoch 13, Loss: 6.5778
+Checkpoint saved: saved_state/active_model_cycle5_epoch13.pth
+100%|██████████| 94/94 [00:05<00:00, 16.16it/s]
+Epoch 14, Loss: 6.3376
+Checkpoint saved: saved_state/active_model_cycle5_epoch14.pth
+100%|██████████| 94/94 [00:05<00:00, 16.32it/s]
+Epoch 15, Loss: 6.1428
+Checkpoint saved: saved_state/active_model_cycle5_epoch15.pth
+100%|██████████| 94/94 [00:05<00:00, 16.32it/s]
+Epoch 16, Loss: 5.9986
+Checkpoint saved: saved_state/active_model_cycle5_epoch16.pth
+100%|██████████| 94/94 [00:05<00:00, 16.41it/s]
+Epoch 17, Loss: 5.7561
+Checkpoint saved: saved_state/active_model_cycle5_epoch17.pth
+100%|██████████| 94/94 [00:05<00:00, 16.69it/s]
+Epoch 18, Loss: 5.6269
+Checkpoint saved: saved_state/active_model_cycle5_epoch18.pth
+100%|██████████| 94/94 [00:05<00:00, 15.86it/s]
+Epoch 19, Loss: 5.4099
+Checkpoint saved: saved_state/active_model_cycle5_epoch19.pth
+100%|██████████| 94/94 [00:05<00:00, 16.43it/s]
+Epoch 20, Loss: 5.2879
+Checkpoint saved: saved_state/active_model_cycle5_epoch20.pth
+100%|██████████| 94/94 [00:05<00:00, 16.65it/s]
+Epoch 21, Loss: 5.1350
+Checkpoint saved: saved_state/active_model_cycle5_epoch21.pth
+100%|██████████| 94/94 [00:05<00:00, 16.11it/s]
+Epoch 22, Loss: 4.9755
+Checkpoint saved: saved_state/active_model_cycle5_epoch22.pth
+100%|██████████| 94/94 [00:05<00:00, 16.11it/s]
+Epoch 23, Loss: 4.8361
+Checkpoint saved: saved_state/active_model_cycle5_epoch23.pth
+100%|██████████| 94/94 [00:06<00:00, 14.91it/s]
+Epoch 24, Loss: 4.7268
+Checkpoint saved: saved_state/active_model_cycle5_epoch24.pth
+100%|██████████| 94/94 [00:05<00:00, 16.79it/s]
+Epoch 25, Loss: 4.6041
+Checkpoint saved: saved_state/active_model_cycle5_epoch25.pth
+100%|██████████| 94/94 [00:05<00:00, 16.27it/s]
+Epoch 26, Loss: 4.4615
+Checkpoint saved: saved_state/active_model_cycle5_epoch26.pth
+100%|██████████| 94/94 [00:05<00:00, 16.03it/s]
+Epoch 27, Loss: 4.2839
+Checkpoint saved: saved_state/active_model_cycle5_epoch27.pth
+100%|██████████| 94/94 [00:05<00:00, 16.51it/s]
+Epoch 28, Loss: 4.1728
+Checkpoint saved: saved_state/active_model_cycle5_epoch28.pth
+100%|██████████| 94/94 [00:05<00:00, 16.75it/s]
+Epoch 29, Loss: 4.0653
+Checkpoint saved: saved_state/active_model_cycle5_epoch29.pth
+100%|██████████| 94/94 [00:05<00:00, 15.86it/s]
+Epoch 30, Loss: 3.9444
+Checkpoint saved: saved_state/active_model_cycle5_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle5_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 10040/10040 [02:25<00:00, 68.96it/s]
+
+=== Active Learning Iteration 6/10 ===
+100%|██████████| 110/110 [00:07<00:00, 15.05it/s]
+Epoch 1, Loss: 15.7609
+Checkpoint saved: saved_state/active_model_cycle6_epoch1.pth
+100%|██████████| 110/110 [00:06<00:00, 16.91it/s]
+Epoch 2, Loss: 11.2721
+Checkpoint saved: saved_state/active_model_cycle6_epoch2.pth
+100%|██████████| 110/110 [00:06<00:00, 16.68it/s]
+Epoch 3, Loss: 9.6657
+Checkpoint saved: saved_state/active_model_cycle6_epoch3.pth
+100%|██████████| 110/110 [00:06<00:00, 16.29it/s]
+Epoch 4, Loss: 9.1065
+Checkpoint saved: saved_state/active_model_cycle6_epoch4.pth
+100%|██████████| 110/110 [00:06<00:00, 16.20it/s]
+Epoch 5, Loss: 8.6596
+Checkpoint saved: saved_state/active_model_cycle6_epoch5.pth
+100%|██████████| 110/110 [00:06<00:00, 16.13it/s]
+Epoch 6, Loss: 8.3319
+Checkpoint saved: saved_state/active_model_cycle6_epoch6.pth
+100%|██████████| 110/110 [00:06<00:00, 16.72it/s]
+Epoch 7, Loss: 8.0005
+Checkpoint saved: saved_state/active_model_cycle6_epoch7.pth
+100%|██████████| 110/110 [00:06<00:00, 16.61it/s]
+Epoch 8, Loss: 7.6591
+Checkpoint saved: saved_state/active_model_cycle6_epoch8.pth
+100%|██████████| 110/110 [00:06<00:00, 15.98it/s]
+Epoch 9, Loss: 7.4396
+Checkpoint saved: saved_state/active_model_cycle6_epoch9.pth
+100%|██████████| 110/110 [00:06<00:00, 16.71it/s]
+Epoch 10, Loss: 7.2247
+Checkpoint saved: saved_state/active_model_cycle6_epoch10.pth
+100%|██████████| 110/110 [00:06<00:00, 16.57it/s]
+Epoch 11, Loss: 6.9735
+Checkpoint saved: saved_state/active_model_cycle6_epoch11.pth
+100%|██████████| 110/110 [00:06<00:00, 15.76it/s]
+Epoch 12, Loss: 6.7737
+Checkpoint saved: saved_state/active_model_cycle6_epoch12.pth
+100%|██████████| 110/110 [00:07<00:00, 15.50it/s]
+Epoch 13, Loss: 6.5511
+Checkpoint saved: saved_state/active_model_cycle6_epoch13.pth
+100%|██████████| 110/110 [00:06<00:00, 16.29it/s]
+Epoch 14, Loss: 6.3814
+Checkpoint saved: saved_state/active_model_cycle6_epoch14.pth
+100%|██████████| 110/110 [00:06<00:00, 16.78it/s]
+Epoch 15, Loss: 6.2352
+Checkpoint saved: saved_state/active_model_cycle6_epoch15.pth
+100%|██████████| 110/110 [00:06<00:00, 16.79it/s]
+Epoch 16, Loss: 6.0076
+Checkpoint saved: saved_state/active_model_cycle6_epoch16.pth
+100%|██████████| 110/110 [00:06<00:00, 16.82it/s]
+Epoch 17, Loss: 5.8092
+Checkpoint saved: saved_state/active_model_cycle6_epoch17.pth
+100%|██████████| 110/110 [00:06<00:00, 16.59it/s]
+Epoch 18, Loss: 5.6705
+Checkpoint saved: saved_state/active_model_cycle6_epoch18.pth
+100%|██████████| 110/110 [00:06<00:00, 17.03it/s]
+Epoch 19, Loss: 5.5481
+Checkpoint saved: saved_state/active_model_cycle6_epoch19.pth
+100%|██████████| 110/110 [00:06<00:00, 16.28it/s]
+Epoch 20, Loss: 5.3448
+Checkpoint saved: saved_state/active_model_cycle6_epoch20.pth
+100%|██████████| 110/110 [00:06<00:00, 16.84it/s]
+Epoch 21, Loss: 5.1910
+Checkpoint saved: saved_state/active_model_cycle6_epoch21.pth
+100%|██████████| 110/110 [00:06<00:00, 17.07it/s]
+Epoch 22, Loss: 5.0204
+Checkpoint saved: saved_state/active_model_cycle6_epoch22.pth
+100%|██████████| 110/110 [00:06<00:00, 16.70it/s]
+Epoch 23, Loss: 4.9518
+Checkpoint saved: saved_state/active_model_cycle6_epoch23.pth
+100%|██████████| 110/110 [00:06<00:00, 16.48it/s]
+Epoch 24, Loss: 4.7265
+Checkpoint saved: saved_state/active_model_cycle6_epoch24.pth
+100%|██████████| 110/110 [00:06<00:00, 16.72it/s]
+Epoch 25, Loss: 4.5716
+Checkpoint saved: saved_state/active_model_cycle6_epoch25.pth
+100%|██████████| 110/110 [00:06<00:00, 16.67it/s]
+Epoch 26, Loss: 4.4131
+Checkpoint saved: saved_state/active_model_cycle6_epoch26.pth
+100%|██████████| 110/110 [00:06<00:00, 16.92it/s]
+Epoch 27, Loss: 4.3300
+Checkpoint saved: saved_state/active_model_cycle6_epoch27.pth
+100%|██████████| 110/110 [00:06<00:00, 16.32it/s]
+Epoch 28, Loss: 4.1679
+Checkpoint saved: saved_state/active_model_cycle6_epoch28.pth
+100%|██████████| 110/110 [00:06<00:00, 17.24it/s]
+Epoch 29, Loss: 4.0282
+Checkpoint saved: saved_state/active_model_cycle6_epoch29.pth
+100%|██████████| 110/110 [00:06<00:00, 16.05it/s]
+Epoch 30, Loss: 3.9091
+Checkpoint saved: saved_state/active_model_cycle6_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle6_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 9790/9790 [02:22<00:00, 68.84it/s]
+
+=== Active Learning Iteration 7/10 ===
+100%|██████████| 125/125 [00:07<00:00, 16.59it/s]
+Epoch 1, Loss: 15.4582
+Checkpoint saved: saved_state/active_model_cycle7_epoch1.pth
+100%|██████████| 125/125 [00:07<00:00, 16.61it/s]
+Epoch 2, Loss: 10.7949
+Checkpoint saved: saved_state/active_model_cycle7_epoch2.pth
+100%|██████████| 125/125 [00:07<00:00, 16.48it/s]
+Epoch 3, Loss: 9.3983
+Checkpoint saved: saved_state/active_model_cycle7_epoch3.pth
+100%|██████████| 125/125 [00:07<00:00, 16.38it/s]
+Epoch 4, Loss: 8.8917
+Checkpoint saved: saved_state/active_model_cycle7_epoch4.pth
+100%|██████████| 125/125 [00:07<00:00, 16.43it/s]
+Epoch 5, Loss: 8.4401
+Checkpoint saved: saved_state/active_model_cycle7_epoch5.pth
+100%|██████████| 125/125 [00:07<00:00, 16.58it/s]
+Epoch 6, Loss: 8.1278
+Checkpoint saved: saved_state/active_model_cycle7_epoch6.pth
+100%|██████████| 125/125 [00:07<00:00, 17.20it/s]
+Epoch 7, Loss: 7.8675
+Checkpoint saved: saved_state/active_model_cycle7_epoch7.pth
+100%|██████████| 125/125 [00:07<00:00, 17.17it/s]
+Epoch 8, Loss: 7.5925
+Checkpoint saved: saved_state/active_model_cycle7_epoch8.pth
+100%|██████████| 125/125 [00:06<00:00, 18.31it/s]
+Epoch 9, Loss: 7.3224
+Checkpoint saved: saved_state/active_model_cycle7_epoch9.pth
+100%|██████████| 125/125 [00:06<00:00, 18.73it/s]
+Epoch 10, Loss: 7.1009
+Checkpoint saved: saved_state/active_model_cycle7_epoch10.pth
+100%|██████████| 125/125 [00:06<00:00, 18.29it/s]
+Epoch 11, Loss: 6.8554
+Checkpoint saved: saved_state/active_model_cycle7_epoch11.pth
+100%|██████████| 125/125 [00:06<00:00, 18.84it/s]
+Epoch 12, Loss: 6.6353
+Checkpoint saved: saved_state/active_model_cycle7_epoch12.pth
+100%|██████████| 125/125 [00:06<00:00, 18.54it/s]
+Epoch 13, Loss: 6.4547
+Checkpoint saved: saved_state/active_model_cycle7_epoch13.pth
+100%|██████████| 125/125 [00:06<00:00, 18.93it/s]
+Epoch 14, Loss: 6.2708
+Checkpoint saved: saved_state/active_model_cycle7_epoch14.pth
+100%|██████████| 125/125 [00:06<00:00, 19.14it/s]
+Epoch 15, Loss: 6.0512
+Checkpoint saved: saved_state/active_model_cycle7_epoch15.pth
+100%|██████████| 125/125 [00:07<00:00, 17.12it/s]
+Epoch 16, Loss: 5.8965
+Checkpoint saved: saved_state/active_model_cycle7_epoch16.pth
+100%|██████████| 125/125 [00:07<00:00, 17.08it/s]
+Epoch 17, Loss: 5.7159
+Checkpoint saved: saved_state/active_model_cycle7_epoch17.pth
+100%|██████████| 125/125 [00:07<00:00, 17.07it/s]
+Epoch 18, Loss: 5.5438
+Checkpoint saved: saved_state/active_model_cycle7_epoch18.pth
+100%|██████████| 125/125 [00:07<00:00, 16.93it/s]
+Epoch 19, Loss: 5.3656
+Checkpoint saved: saved_state/active_model_cycle7_epoch19.pth
+100%|██████████| 125/125 [00:07<00:00, 16.87it/s]
+Epoch 20, Loss: 5.1935
+Checkpoint saved: saved_state/active_model_cycle7_epoch20.pth
+100%|██████████| 125/125 [00:07<00:00, 16.76it/s]
+Epoch 21, Loss: 5.0364
+Checkpoint saved: saved_state/active_model_cycle7_epoch21.pth
+100%|██████████| 125/125 [00:07<00:00, 16.65it/s]
+Epoch 22, Loss: 4.9000
+Checkpoint saved: saved_state/active_model_cycle7_epoch22.pth
+100%|██████████| 125/125 [00:07<00:00, 17.21it/s]
+Epoch 23, Loss: 4.7207
+Checkpoint saved: saved_state/active_model_cycle7_epoch23.pth
+100%|██████████| 125/125 [00:07<00:00, 17.05it/s]
+Epoch 24, Loss: 4.5541
+Checkpoint saved: saved_state/active_model_cycle7_epoch24.pth
+100%|██████████| 125/125 [00:07<00:00, 16.47it/s]
+Epoch 25, Loss: 4.4374
+Checkpoint saved: saved_state/active_model_cycle7_epoch25.pth
+100%|██████████| 125/125 [00:07<00:00, 16.19it/s]
+Epoch 26, Loss: 4.3021
+Checkpoint saved: saved_state/active_model_cycle7_epoch26.pth
+100%|██████████| 125/125 [00:07<00:00, 16.54it/s]
+Epoch 27, Loss: 4.1689
+Checkpoint saved: saved_state/active_model_cycle7_epoch27.pth
+100%|██████████| 125/125 [00:07<00:00, 16.60it/s]
+Epoch 28, Loss: 4.0312
+Checkpoint saved: saved_state/active_model_cycle7_epoch28.pth
+100%|██████████| 125/125 [00:07<00:00, 16.98it/s]
+Epoch 29, Loss: 3.8822
+Checkpoint saved: saved_state/active_model_cycle7_epoch29.pth
+100%|██████████| 125/125 [00:07<00:00, 17.12it/s]
+Epoch 30, Loss: 3.8030
+Checkpoint saved: saved_state/active_model_cycle7_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle7_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 9540/9540 [02:17<00:00, 69.36it/s]
+
+=== Active Learning Iteration 8/10 ===
+100%|██████████| 141/141 [00:08<00:00, 16.66it/s]
+Epoch 1, Loss: 15.4216
+Checkpoint saved: saved_state/active_model_cycle8_epoch1.pth
+100%|██████████| 141/141 [00:08<00:00, 16.59it/s]
+Epoch 2, Loss: 10.6555
+Checkpoint saved: saved_state/active_model_cycle8_epoch2.pth
+100%|██████████| 141/141 [00:08<00:00, 17.11it/s]
+Epoch 3, Loss: 9.3383
+Checkpoint saved: saved_state/active_model_cycle8_epoch3.pth
+100%|██████████| 141/141 [00:08<00:00, 17.59it/s]
+Epoch 4, Loss: 8.7751
+Checkpoint saved: saved_state/active_model_cycle8_epoch4.pth
+100%|██████████| 141/141 [00:07<00:00, 17.71it/s]
+Epoch 5, Loss: 8.3392
+Checkpoint saved: saved_state/active_model_cycle8_epoch5.pth
+100%|██████████| 141/141 [00:07<00:00, 18.96it/s]
+Epoch 6, Loss: 8.0276
+Checkpoint saved: saved_state/active_model_cycle8_epoch6.pth
+100%|██████████| 141/141 [00:07<00:00, 18.64it/s]
+Epoch 7, Loss: 7.7661
+Checkpoint saved: saved_state/active_model_cycle8_epoch7.pth
+100%|██████████| 141/141 [00:07<00:00, 18.67it/s]
+Epoch 8, Loss: 7.5722
+Checkpoint saved: saved_state/active_model_cycle8_epoch8.pth
+100%|██████████| 141/141 [00:07<00:00, 18.55it/s]
+Epoch 9, Loss: 7.3162
+Checkpoint saved: saved_state/active_model_cycle8_epoch9.pth
+100%|██████████| 141/141 [00:07<00:00, 19.30it/s]
+Epoch 10, Loss: 7.0765
+Checkpoint saved: saved_state/active_model_cycle8_epoch10.pth
+100%|██████████| 141/141 [00:07<00:00, 18.05it/s]
+Epoch 11, Loss: 6.8393
+Checkpoint saved: saved_state/active_model_cycle8_epoch11.pth
+100%|██████████| 141/141 [00:08<00:00, 16.73it/s]
+Epoch 12, Loss: 6.6417
+Checkpoint saved: saved_state/active_model_cycle8_epoch12.pth
+100%|██████████| 141/141 [00:08<00:00, 17.17it/s]
+Epoch 13, Loss: 6.4472
+Checkpoint saved: saved_state/active_model_cycle8_epoch13.pth
+100%|██████████| 141/141 [00:08<00:00, 17.19it/s]
+Epoch 14, Loss: 6.2137
+Checkpoint saved: saved_state/active_model_cycle8_epoch14.pth
+100%|██████████| 141/141 [00:08<00:00, 17.01it/s]
+Epoch 15, Loss: 6.0206
+Checkpoint saved: saved_state/active_model_cycle8_epoch15.pth
+100%|██████████| 141/141 [00:08<00:00, 17.54it/s]
+Epoch 16, Loss: 5.8087
+Checkpoint saved: saved_state/active_model_cycle8_epoch16.pth
+100%|██████████| 141/141 [00:08<00:00, 16.97it/s]
+Epoch 17, Loss: 5.6739
+Checkpoint saved: saved_state/active_model_cycle8_epoch17.pth
+100%|██████████| 141/141 [00:08<00:00, 16.96it/s]
+Epoch 18, Loss: 5.4673
+Checkpoint saved: saved_state/active_model_cycle8_epoch18.pth
+100%|██████████| 141/141 [00:08<00:00, 17.38it/s]
+Epoch 19, Loss: 5.3086
+Checkpoint saved: saved_state/active_model_cycle8_epoch19.pth
+100%|██████████| 141/141 [00:08<00:00, 17.41it/s]
+Epoch 20, Loss: 5.1464
+Checkpoint saved: saved_state/active_model_cycle8_epoch20.pth
+100%|██████████| 141/141 [00:08<00:00, 16.74it/s]
+Epoch 21, Loss: 5.0188
+Checkpoint saved: saved_state/active_model_cycle8_epoch21.pth
+100%|██████████| 141/141 [00:08<00:00, 17.12it/s]
+Epoch 22, Loss: 4.8255
+Checkpoint saved: saved_state/active_model_cycle8_epoch22.pth
+100%|██████████| 141/141 [00:08<00:00, 16.88it/s]
+Epoch 23, Loss: 4.6373
+Checkpoint saved: saved_state/active_model_cycle8_epoch23.pth
+100%|██████████| 141/141 [00:08<00:00, 17.16it/s]
+Epoch 24, Loss: 4.4954
+Checkpoint saved: saved_state/active_model_cycle8_epoch24.pth
+100%|██████████| 141/141 [00:08<00:00, 17.35it/s]
+Epoch 25, Loss: 4.2968
+Checkpoint saved: saved_state/active_model_cycle8_epoch25.pth
+100%|██████████| 141/141 [00:08<00:00, 17.48it/s]
+Epoch 26, Loss: 4.2031
+Checkpoint saved: saved_state/active_model_cycle8_epoch26.pth
+100%|██████████| 141/141 [00:08<00:00, 17.20it/s]
+Epoch 27, Loss: 4.0774
+Checkpoint saved: saved_state/active_model_cycle8_epoch27.pth
+100%|██████████| 141/141 [00:08<00:00, 16.36it/s]
+Epoch 28, Loss: 3.9653
+Checkpoint saved: saved_state/active_model_cycle8_epoch28.pth
+100%|██████████| 141/141 [00:08<00:00, 17.43it/s]
+Epoch 29, Loss: 3.7786
+Checkpoint saved: saved_state/active_model_cycle8_epoch29.pth
+100%|██████████| 141/141 [00:08<00:00, 17.28it/s]
+Epoch 30, Loss: 3.6953
+Checkpoint saved: saved_state/active_model_cycle8_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle8_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 9290/9290 [02:13<00:00, 69.78it/s]
+
+=== Active Learning Iteration 9/10 ===
+100%|██████████| 157/157 [00:08<00:00, 17.82it/s]
+Epoch 1, Loss: 14.7210
+Checkpoint saved: saved_state/active_model_cycle9_epoch1.pth
+100%|██████████| 157/157 [00:09<00:00, 17.25it/s]
+Epoch 2, Loss: 10.2276
+Checkpoint saved: saved_state/active_model_cycle9_epoch2.pth
+100%|██████████| 157/157 [00:08<00:00, 17.70it/s]
+Epoch 3, Loss: 9.1963
+Checkpoint saved: saved_state/active_model_cycle9_epoch3.pth
+100%|██████████| 157/157 [00:08<00:00, 17.95it/s]
+Epoch 4, Loss: 8.6939
+Checkpoint saved: saved_state/active_model_cycle9_epoch4.pth
+100%|██████████| 157/157 [00:08<00:00, 17.63it/s]
+Epoch 5, Loss: 8.3504
+Checkpoint saved: saved_state/active_model_cycle9_epoch5.pth
+100%|██████████| 157/157 [00:09<00:00, 17.33it/s]
+Epoch 6, Loss: 8.0278
+Checkpoint saved: saved_state/active_model_cycle9_epoch6.pth
+100%|██████████| 157/157 [00:09<00:00, 16.80it/s]
+Epoch 7, Loss: 7.7447
+Checkpoint saved: saved_state/active_model_cycle9_epoch7.pth
+100%|██████████| 157/157 [00:08<00:00, 17.75it/s]
+Epoch 8, Loss: 7.4971
+Checkpoint saved: saved_state/active_model_cycle9_epoch8.pth
+100%|██████████| 157/157 [00:08<00:00, 18.09it/s]
+Epoch 9, Loss: 7.2268
+Checkpoint saved: saved_state/active_model_cycle9_epoch9.pth
+100%|██████████| 157/157 [00:09<00:00, 17.34it/s]
+Epoch 10, Loss: 6.9873
+Checkpoint saved: saved_state/active_model_cycle9_epoch10.pth
+100%|██████████| 157/157 [00:08<00:00, 17.55it/s]
+Epoch 11, Loss: 6.8177
+Checkpoint saved: saved_state/active_model_cycle9_epoch11.pth
+100%|██████████| 157/157 [00:08<00:00, 17.82it/s]
+Epoch 12, Loss: 6.6133
+Checkpoint saved: saved_state/active_model_cycle9_epoch12.pth
+100%|██████████| 157/157 [00:08<00:00, 17.57it/s]
+Epoch 13, Loss: 6.4292
+Checkpoint saved: saved_state/active_model_cycle9_epoch13.pth
+100%|██████████| 157/157 [00:09<00:00, 17.30it/s]
+Epoch 14, Loss: 6.2329
+Checkpoint saved: saved_state/active_model_cycle9_epoch14.pth
+100%|██████████| 157/157 [00:08<00:00, 17.84it/s]
+Epoch 15, Loss: 6.0558
+Checkpoint saved: saved_state/active_model_cycle9_epoch15.pth
+100%|██████████| 157/157 [00:09<00:00, 17.11it/s]
+Epoch 16, Loss: 5.8946
+Checkpoint saved: saved_state/active_model_cycle9_epoch16.pth
+100%|██████████| 157/157 [00:09<00:00, 17.25it/s]
+Epoch 17, Loss: 5.7435
+Checkpoint saved: saved_state/active_model_cycle9_epoch17.pth
+100%|██████████| 157/157 [00:08<00:00, 18.26it/s]
+Epoch 18, Loss: 5.5428
+Checkpoint saved: saved_state/active_model_cycle9_epoch18.pth
+100%|██████████| 157/157 [00:08<00:00, 18.83it/s]
+Epoch 19, Loss: 5.3308
+Checkpoint saved: saved_state/active_model_cycle9_epoch19.pth
+100%|██████████| 157/157 [00:08<00:00, 19.34it/s]
+Epoch 20, Loss: 5.1608
+Checkpoint saved: saved_state/active_model_cycle9_epoch20.pth
+100%|██████████| 157/157 [00:07<00:00, 19.82it/s]
+Epoch 21, Loss: 5.0452
+Checkpoint saved: saved_state/active_model_cycle9_epoch21.pth
+100%|██████████| 157/157 [00:08<00:00, 19.26it/s]
+Epoch 22, Loss: 4.8341
+Checkpoint saved: saved_state/active_model_cycle9_epoch22.pth
+100%|██████████| 157/157 [00:08<00:00, 18.18it/s]
+Epoch 23, Loss: 4.6739
+Checkpoint saved: saved_state/active_model_cycle9_epoch23.pth
+100%|██████████| 157/157 [00:09<00:00, 17.08it/s]
+Epoch 24, Loss: 4.5395
+Checkpoint saved: saved_state/active_model_cycle9_epoch24.pth
+100%|██████████| 157/157 [00:09<00:00, 17.18it/s]
+Epoch 25, Loss: 4.3948
+Checkpoint saved: saved_state/active_model_cycle9_epoch25.pth
+100%|██████████| 157/157 [00:09<00:00, 17.23it/s]
+Epoch 26, Loss: 4.2221
+Checkpoint saved: saved_state/active_model_cycle9_epoch26.pth
+100%|██████████| 157/157 [00:08<00:00, 17.53it/s]
+Epoch 27, Loss: 4.1082
+Checkpoint saved: saved_state/active_model_cycle9_epoch27.pth
+100%|██████████| 157/157 [00:09<00:00, 17.19it/s]
+Epoch 28, Loss: 3.9736
+Checkpoint saved: saved_state/active_model_cycle9_epoch28.pth
+100%|██████████| 157/157 [00:09<00:00, 17.37it/s]
+Epoch 29, Loss: 3.8600
+Checkpoint saved: saved_state/active_model_cycle9_epoch29.pth
+100%|██████████| 157/157 [00:08<00:00, 17.59it/s]
+Epoch 30, Loss: 3.7461
+Checkpoint saved: saved_state/active_model_cycle9_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle9_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 9040/9040 [02:11<00:00, 68.96it/s]
+
+=== Active Learning Iteration 10/10 ===
+100%|██████████| 172/172 [00:09<00:00, 17.87it/s]
+Epoch 1, Loss: 14.8118
+Checkpoint saved: saved_state/active_model_cycle10_epoch1.pth
+100%|██████████| 172/172 [00:09<00:00, 18.02it/s]
+Epoch 2, Loss: 10.2274
+Checkpoint saved: saved_state/active_model_cycle10_epoch2.pth
+100%|██████████| 172/172 [00:09<00:00, 17.61it/s]
+Epoch 3, Loss: 9.2288
+Checkpoint saved: saved_state/active_model_cycle10_epoch3.pth
+100%|██████████| 172/172 [00:09<00:00, 17.94it/s]
+Epoch 4, Loss: 8.6939
+Checkpoint saved: saved_state/active_model_cycle10_epoch4.pth
+100%|██████████| 172/172 [00:09<00:00, 17.61it/s]
+Epoch 5, Loss: 8.3300
+Checkpoint saved: saved_state/active_model_cycle10_epoch5.pth
+100%|██████████| 172/172 [00:09<00:00, 18.02it/s]
+Epoch 6, Loss: 8.0665
+Checkpoint saved: saved_state/active_model_cycle10_epoch6.pth
+100%|██████████| 172/172 [00:09<00:00, 18.07it/s]
+Epoch 7, Loss: 7.7710
+Checkpoint saved: saved_state/active_model_cycle10_epoch7.pth
+100%|██████████| 172/172 [00:09<00:00, 17.76it/s]
+Epoch 8, Loss: 7.5238
+Checkpoint saved: saved_state/active_model_cycle10_epoch8.pth
+100%|██████████| 172/172 [00:09<00:00, 17.84it/s]
+Epoch 9, Loss: 7.2539
+Checkpoint saved: saved_state/active_model_cycle10_epoch9.pth
+100%|██████████| 172/172 [00:09<00:00, 17.70it/s]
+Epoch 10, Loss: 7.0446
+Checkpoint saved: saved_state/active_model_cycle10_epoch10.pth
+100%|██████████| 172/172 [00:09<00:00, 17.23it/s]
+Epoch 11, Loss: 6.8053
+Checkpoint saved: saved_state/active_model_cycle10_epoch11.pth
+100%|██████████| 172/172 [00:09<00:00, 17.80it/s]
+Epoch 12, Loss: 6.6564
+Checkpoint saved: saved_state/active_model_cycle10_epoch12.pth
+100%|██████████| 172/172 [00:09<00:00, 17.33it/s]
+Epoch 13, Loss: 6.4548
+Checkpoint saved: saved_state/active_model_cycle10_epoch13.pth
+100%|██████████| 172/172 [00:09<00:00, 17.94it/s]
+Epoch 14, Loss: 6.2515
+Checkpoint saved: saved_state/active_model_cycle10_epoch14.pth
+100%|██████████| 172/172 [00:09<00:00, 17.95it/s]
+Epoch 15, Loss: 6.0648
+Checkpoint saved: saved_state/active_model_cycle10_epoch15.pth
+100%|██████████| 172/172 [00:09<00:00, 17.57it/s]
+Epoch 16, Loss: 5.8843
+Checkpoint saved: saved_state/active_model_cycle10_epoch16.pth
+100%|██████████| 172/172 [00:09<00:00, 18.04it/s]
+Epoch 17, Loss: 5.7174
+Checkpoint saved: saved_state/active_model_cycle10_epoch17.pth
+100%|██████████| 172/172 [00:09<00:00, 17.75it/s]
+Epoch 18, Loss: 5.5158
+Checkpoint saved: saved_state/active_model_cycle10_epoch18.pth
+100%|██████████| 172/172 [00:09<00:00, 17.63it/s]
+Epoch 19, Loss: 5.3186
+Checkpoint saved: saved_state/active_model_cycle10_epoch19.pth
+100%|██████████| 172/172 [00:09<00:00, 17.38it/s]
+Epoch 20, Loss: 5.1837
+Checkpoint saved: saved_state/active_model_cycle10_epoch20.pth
+100%|██████████| 172/172 [00:10<00:00, 16.41it/s]
+Epoch 21, Loss: 4.9942
+Checkpoint saved: saved_state/active_model_cycle10_epoch21.pth
+100%|██████████| 172/172 [00:09<00:00, 17.26it/s]
+Epoch 22, Loss: 4.8376
+Checkpoint saved: saved_state/active_model_cycle10_epoch22.pth
+100%|██████████| 172/172 [00:09<00:00, 17.45it/s]
+Epoch 23, Loss: 4.6622
+Checkpoint saved: saved_state/active_model_cycle10_epoch23.pth
+100%|██████████| 172/172 [00:09<00:00, 17.61it/s]
+Epoch 24, Loss: 4.5224
+Checkpoint saved: saved_state/active_model_cycle10_epoch24.pth
+100%|██████████| 172/172 [00:09<00:00, 17.67it/s]
+Epoch 25, Loss: 4.3648
+Checkpoint saved: saved_state/active_model_cycle10_epoch25.pth
+100%|██████████| 172/172 [00:09<00:00, 17.77it/s]
+Epoch 26, Loss: 4.1921
+Checkpoint saved: saved_state/active_model_cycle10_epoch26.pth
+100%|██████████| 172/172 [00:09<00:00, 17.51it/s]
+Epoch 27, Loss: 4.0732
+Checkpoint saved: saved_state/active_model_cycle10_epoch27.pth
+100%|██████████| 172/172 [00:09<00:00, 17.41it/s]
+Epoch 28, Loss: 3.9435
+Checkpoint saved: saved_state/active_model_cycle10_epoch28.pth
+100%|██████████| 172/172 [00:09<00:00, 17.26it/s]
+Epoch 29, Loss: 3.8114
+Checkpoint saved: saved_state/active_model_cycle10_epoch29.pth
+100%|██████████| 172/172 [00:10<00:00, 17.03it/s]
+Epoch 30, Loss: 3.6959
+Checkpoint saved: saved_state/active_model_cycle10_epoch30.pth
+Checkpoint saved: saved_state/active_model_cycle10_epoch30.pth
+Uncertainty Estimation: 100%|██████████| 8790/8790 [02:04<00:00, 70.44it/s]
+
+Active Learning completed!
